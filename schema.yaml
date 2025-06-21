@@ -1,0 +1,97 @@
+# ARF v0.1 - Minimal Viable Research Format
+# Addresses: Preserved_Amber (link rot) + WrittenIn_Amber (PDF jail)
+
+# Required metadata
+arf_version: "0.1"
+title: "Your Paper Title"
+created: "2025-06-21"
+updated: "2025-06-21"
+
+# Author information
+authors:
+  - name: "Your Name"
+    email: "you@institution.edu"
+    orcid: "0000-0000-0000-0000"  # optional
+    affiliation: "Your Institution"
+
+# Core content sections
+abstract: |
+  Your abstract text here. Can be multiple paragraphs.
+  Supports basic markdown formatting.
+
+content:
+  introduction: |
+    Your introduction content...
+    
+  methods: |
+    Description of your methodology...
+    
+  results: |
+    Your findings...
+    
+  discussion: |
+    Analysis and interpretation...
+    
+  conclusion: |
+    Summary and implications...
+
+# Link preservation (Preserved_Amber core feature)
+references:
+  - id: "smith2023"
+    title: "Original Paper Title"
+    url: "https://example.com/paper"
+    archived_urls:
+      - "https://web.archive.org/web/20231201/https://example.com/paper"
+      - "https://perma.cc/ABC123"
+    doi: "10.1000/xyz123"  # if available
+    accessed: "2025-06-21"
+    
+  - id: "dataset1"
+    title: "Research Dataset"
+    url: "https://zenodo.org/record/123456"
+    archived_urls:
+      - "https://archive.org/details/research-dataset-backup"
+    type: "dataset"
+    accessed: "2025-06-21"
+
+# Assets with preservation
+assets:
+  figures:
+    - id: "fig1"
+      file: "./figures/results_chart.png"
+      caption: "Main findings visualization"
+      alt_text: "Bar chart showing 40% increase across conditions"
+      
+  data:
+    - id: "data1"
+      file: "./data/experiment_results.csv"
+      description: "Raw experimental data"
+      format: "CSV"
+
+# Responsive reading hints (WrittenIn_Amber core feature)
+display:
+  reading_levels:
+    - "general"      # Abstract + key findings
+    - "academic"     # Full paper
+    - "technical"    # All details + methods
+    
+  mobile_friendly: true
+  interactive_elements: []  # For future use
+
+# Preservation metadata
+preservation:
+  checksum: "sha256:abc123..."  # File integrity
+  dependencies:
+    - "Python 3.9+"
+    - "pandas >= 1.3.0"
+  
+  archived_at:
+    - "https://backup-location-1.org/path"
+    - "https://backup-location-2.org/path"
+
+# Export compatibility
+exports:
+  pdf: true
+  html: true
+  markdown: true
+  jats_xml: false  # Future feature
