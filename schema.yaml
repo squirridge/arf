@@ -75,7 +75,7 @@ display:
     - "academic"     # Full paper
     - "technical"    # All details + methods
     
-  mobile_friendly: true
+  WCAG_achieved: "AA" # Needs richer application
   interactive_elements: []  # For future use
 
 # Preservation metadata
@@ -88,10 +88,3 @@ preservation:
   archived_at:
     - "https://backup-location-1.org/path"
     - "https://backup-location-2.org/path"
-
-# Export compatibility
-exports:
-  pdf: true
-  html: true
-  markdown: true
-  jats_xml: false  # Future feature
